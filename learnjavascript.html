@@ -1,0 +1,2260 @@
+  
+<!DOCTYPE html>
+<html>
+<head>
+    <title>java script   Show/Hide Content</title>
+  <style>
+        .content {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+ 
+    <p>
+         About
+        <span id="toggleButton">'>' </span>
+    </p>
+    <div id="contentContainer" class="content">
+        <!-- Your content goes here -->
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed lorem vel magna rhoncus aliquet.
+        Ut ullamcorper pharetra nunc, sit amet fermentum velit eleifend non. Donec fermentum felis a velit ultricies,
+        eget tempus quam malesuada. Sed cursus ligula id volutpat viverra. In sed nisi massa. Donec ac sollicitudin tortor.
+        Integer a pulvinar nibh, ut faucibus erat. Donec ullamcorper ex in justo consequat dignissim. Sed tincidunt
+        libero quis libero auctor congue. Suspendisse at aliquam neque, a vestibulum tellus. Aenean lacinia purus id
+        orci bibendum dignissim. Proin id facilisis odio. Fusce rutrum neque quis arcu ullamcorper aliquam. Sed sem
+        lacus, pulvinar vitae lacus vitae, rhoncus consectetur ex.
+    </div>
+
+     
+</body>
+ 
+ <script>
+   
+ document.getElementById('toggleButton').addEventListener('click', function() {
+    var content = document.getElementById('contentContainer');
+    content.classList.toggle('active');
+    this.textContent = content.classList.contains('active') ? 'Hide Content' : 'Show Content';
+});
+</script>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java-script</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            border: 2px solid red;
+            margin: 3px 0;
+            background: cyan;
+            padding: 9px;
+        }
+        .bg-primary{
+            background-color: blueviolet;
+        }
+        .text-success{
+            color:  white;
+        }
+    </style>
+</head>
+<body>
+    <h1> welcome to this is java-script </h1>
+<div class="container">
+    <button id="click" onclick="clicked()">Click Me</button>
+    <p>this is para which is best </p>
+</div>
+</body>
+<script>
+    // 1. way to print in js 
+    console.log(" Hello Word"); /* this is present in inspect */
+    console.log(" Hello Word",4+6,"another log"); 
+    alert("Hello-adi");
+    document.write("this is document write we print any lines useing this command");
+
+    // 2. javascript console API-application programe interface
+    console.warn("this is warning");
+    console.error("this is an error ");
+    console.assert(5>555); // if true dont show error else show error
+    obj = {a:1,b:2,c:3} 
+    console.table(obj)
+
+    for(let i=0;i<5;i++){
+        console.log(233)
+    }
+    console.time("whilellop")  //used to find time required for loops
+   // console.clear();/* console becomes clears */
+   // we can also create index.js folder to store script of js. n we have to give add of this file
+  /*   <script src="index.js"><script> */
+   
+   //3.java-script Variable - variables are use to store data values 
+    var number1 = 32;
+    var number2 = 58;
+    console.log(number1 + number2);
+
+      //or
+
+    let a = 67
+    console.log(a) 
+
+    //4.*** Data types in js ***
+
+    let a =null
+    let b = 345
+     let c = true
+     let d = BigInt("345")
+     let e = "ADI"
+     let f = Symbol("i m nice symbol")
+     let g = undefined
+     console.log(a,b,c,d,e,f,g)
+  console.log(typeof d)
+
+
+    //number
+    var num1 = 455;
+    var num2 = 555;
+    //string 
+    var str1 = " This is a string";
+    var str2 = " this also string";
+    //objects- which is also non-primitive 
+    var marks = {
+        ravi: 85,
+        adi: 99,
+        nik: 99
+
+ }
+
+
+ marks['niki']='99'
+ console.log(num1);
+ console.log(str1);
+ console.log(num2,str2);
+ console.log(marks)
+ console.log(marks ["ravi"]) 
+ console.log(num1 + num2) 
+
+ //*** Booleans ***
+ var a = true;
+ var b = false;
+ console.log(a,b);
+
+ //***undefine***
+ var und = undefined;
+ // var und;
+ console.log(und);
+
+ //*** null***
+var n = null;
+console.log(n);
+
+//*** array-it is collection of element, it can be string, no., booleans ,array.
+/*at very high level , there are two tpes of data type 
+1.primitive data type: undefine,null, number, string ,boolean, symbol
+2.referance data type:arrays , objects.
+*/
+
+//***array***//
+var arr = [1,2,3,4,5,"bablu"];
+console.log(arr);
+ console.log(arr [2]);
+ console.log(arr [4]);
+ console.log(arr [5]);
+ console.log(arr)
+ console.log(arr.length)
+ //for changing value 
+
+var arr = [1,2,3,4,5,"bablu"];
+arr[2] =8;
+console.log(arr)
+
+//for convert arry to string
+let num = [1,2,3,4]
+let b = num.toString()
+console.log(b)
+
+//join arry - _,and,or this words are used as joineds
+let num = [1,2,3,4]
+let c = num.join("_")
+console.log(c,typeof c)
+
+//pop arry
+let num = [1,2,3,4]
+ num.pop()
+ console.log(num)
+
+ //push -arry
+ num = [1,2,3,4]
+  let r = num.push(5)
+ console.log(num ,r )
+
+ //shift-arry
+
+ let r = num.shift()
+ console.log(r,num)
+
+ //unshift
+ let r =num.unshift(78)
+ console.log(r,num)
+ 
+ //sort 
+ let compare = (a,b)=>{
+    return b-a
+ }
+let num = [333 ,434, 54, 53, 43, 87, 22]
+num.sort(compare)
+num.reverse()
+console.log(num)
+
+//splice and slice
+let num = [551,22,3,14,5,6,7,8,229]
+num.splice(2  /* first 2 tak same*/,3/* next 3 delete and num.splice ke add honge */,1021,1022,1023,1024,1025)
+console.log(num)
+
+let num = [551,22,3,14,5,6,7,8,229]
+num.slice(3)
+ num.slice(3,6)
+
+
+
+ //array wigth loops -eg for, for-in  ,for-offetc,.
+
+ /* for each */
+let num = [3,5,7,9,1,23]
+num.forEach((element) =>{
+    console.log(element * element)
+})
+
+/* Array .from*/
+let name = "ADITYA"
+let arr = Array.from(name)
+console.log(arr)
+
+/*for-of  used to print values */
+let  abx = [1,2,3,4,5,6,7,8,9,10]
+for( let i of  abx ){
+    console.log(i)
+}
+
+/*for-in  used to print keys */
+let  abx = [1,2,3,4,5,6,7,8,9,10]
+for( let i in  abx ){
+    console.log(abx[i]) 
+}
+
+
+/* map */
+ let arr=[56 ,46 ,476]
+let a = arr.map((value ,index ,array)=>{
+    console.log (value, index,array)
+    return value + 1
+
+})
+console.log(a)
+
+/* filter */
+let xyz =[2,67,433,23,8,98.3454]
+let pqr = xyz.filter((a)=>{
+    return a<10
+})
+console.log(pqr)
+
+
+/*reduce method */
+let arr2= [3 ,4, 5, 67 ,78 ,97 ,6]
+let newarr2= arr2.reduce((h1,h2)=>{
+    return h1 + h2
+})
+console.log(newarr2)
+
+//questions 
+/* create array  and take input from user and add this */
+
+let arr9 = [1,2,3,4,5,6,7,8,9]
+let a = prompt(" Enter a number ")
+a= Number.parseInt(a)
+arr.push(a)
+console.log(arr)
+
+/* filter no which is divisible by 10 */
+let  yyy = [1,2,30,4,50,6,7,83,670]
+let   v =  yyy.filter((x)=>{
+     return x%10==0
+})
+console.log( v)
+
+/*take square of no. using map*/
+let arr = [3,4,45,6,5,877,66,8,6]
+let n = arr.map((x)=>{
+    return x*x
+})
+console.log(n)
+
+
+
+  //***Operators***//
+ var a = 100;
+ var b = 10;
+ console.log("the value of a + b is ", a+b);
+ console.log("the value of a - b is ", a-b);
+ console.log("the value of a * b is ", a*b);
+ console.log("the value of a / b is ", a/b);
+console.log("the value of a ** b is ", a**b);
+console.log("the value of a++ is ", a++);
+console.log("the value of a-- is ", a--);
+
+//***Assignment Operators***//
+var c = b;
+c +=2;  //b me +2 add hoga 
+c -=2;
+c *=2;
+c /=2;
+console.log(c);
+
+//***comparison operator***//
+var x = 25;
+var y =35;
+console.log(x == y);
+console.log(x <= y);
+console.log(x >= y);
+console.log(x > y);
+console.log(x < y);
+console.log(x != y);
+console.log(x === y);   // its cheack wheather alues are same or not also cheack types (string,number,,,,etc,.) 
+console.log(x ? y);
+
+
+//***logical operators***//
+//and - true when both are true
+console.log(true && true);
+console.log(true && false);
+console.log(false && false);
+console.log(false && true);
+
+// or -at least one is true 
+console.log(true  || true);
+console.log(true ||  false);
+console.log(false || false);
+console.log(false || true);
+
+// not -true becomes false ,vice versa 
+console.log(!false);
+console.log(!true);
+
+
+
+   //eg questions-
+   //   1.cheack age wheather lies betwn 10 and 20 
+   let age = prompt("what's your age ?")
+   if(age>10 && age<20){
+    console.log("u lies betn age 10 & 20")
+  }
+else{
+    console.log("u are not in 10 and 20 ")
+}
+
+//switch cases
+let age = prompt("what's your age ?")
+switch (age) {
+    case '1' :
+        console.log("ur age is 1");
+        break;
+    case '2' :
+        console.log("ur age is 2");
+        break   ;
+    case '3' :
+        console.log("ur age is 3");
+        break    ;
+    case '4' :
+        console.log("ur age is 4");
+        break;
+     default:
+        console.log("ur age is not specifyed");
+}
+
+//programe to cheack no is divisible by 2 and 3  if or --->"||" use this
+
+let num = prompt("what's your age?")
+num = Number.parseInt(num)
+if(num % 2== 0 && num % 3== 0) {
+    console.log("no is divisible by 2 and 3")
+}
+else{
+    console.log("no is not divisible by2 and 3")
+}
+
+//ternary oper.
+let age = 12
+let a = age > 18 ? "u can drive ": "u cant drive "
+console.log(a)
+
+
+//***function***//
+function avg(a,b){
+    c = (a + b)/2;
+    return c;
+}
+c1 = avg(4 , 6);
+c2 = avg(14 , 16);
+console.log(c1 ,c2);
+
+
+function onePlusAvg(x,y) {
+    return 1 + (x + y)/2
+}
+let a = 1;
+let b = 2;
+let c = 3;
+console.log("One plus avg of a and b is " ,onePlusAvg(a ,b ))
+console.log("One plus avg of a and b is ", onePlusAvg(b ,c ))
+console.log("One plus avg of a and b is " ,onePlusAvg(a ,c ))
+
+
+
+
+
+
+//***conditionals in js ***//
+var age =  54;
+// first method for condition 
+if(age > 21 ){
+    console.log(" mans can married");
+
+}
+else{
+    console.log('mans cannt married  ');
+
+}
+//second method for condition  only one condition will satisfy
+if( age > 21){
+    console.log("man can married");
+ }
+ else if( age >26){
+    console.log("above 21  mans can married")
+ }
+ else if( age > 55){
+    console.log("above all 21  mans   can married")
+ }
+else{
+    console.log("u can t married")
+}
+
+//***loops ***//
+//for loops 
+
+var arr = [1,2,3,4,5,6,7];
+console.log("this is for loop");
+console.log(arr);
+for( var i = 0 ; i <arr.length;i++){
+    console.log(arr[i]);
+}
+
+for (let i = 0; i < 35; i++){
+    console.log(i)
+    console.log(i+1)// print after than 0 becoz,0+1=1
+}
+
+//progr. for sum 
+let sum =0
+let n = prompt("Enter the value of n ")
+n = Number.parseInt(n)
+for (let i = 0; i < n; i++){
+    sum += (i+1)
+} 
+console.log("sum of first"+ n +"natural no. is " + sum)
+
+
+
+    //question - print name : marks using for loop 
+
+    let marks = { ADI : 96,
+    NIK :95,
+    SHIV : 94,
+    VIKI :93
+  }
+  for(let i= 0;i<Object.keys(marks).length;i++){
+    console.log("The marks of  " + Object.keys(marks)[i] + " are" + marks[Object.keys(marks)[i]])
+  }
+
+  //question -print no. until user press ur mention no. cn - correct number
+  let cn = 4
+  let i
+  while(i != cn){
+    console.log("Try again")
+    i = prompt("Enter a number :")
+    
+  }
+  console.log("you have entered correct no")
+
+//for-in
+let obj = {
+    ADI : 96,
+    NIK :95,
+    SHIV : 94,
+    VIKI :93
+
+}
+for (let a in obj){
+    console.log("Marks of " + a + " are "+ obj[a])
+}
+
+//for -of
+
+ for (let b of "ADITYA") {
+    console.log(b)
+ }
+
+
+
+//while loop
+var arr = [1,2,3,4,5,6,7];
+let j = 0;
+while(j<arr.length){
+    console.log(arr[j]);
+    j++;
+}
+
+
+
+ /* var arr = [1,2,3,4,5,6,7];
+ let j = 0;
+ do{
+    console.log(arr[j]);
+    j++;
+ } while (j< arr.length); */
+
+
+ //***break & continue  ***//
+  var arr = [1,2,3,4,5,6,7];
+ for( var i = 0 ; i <arr.length;i++){
+    if(i==2){
+       // break;//break- eske age sab break hoga
+        continue;//sirf 2 keli break hoga n aagi sab normal  
+    }
+    console.log(arr[i]);
+ }
+ 
+
+ //***array's method ***//
+/*
+ let myArr = ['Fan','camera' 23,null, true];
+ console.log(myArr.length);
+ myArr.pop();// first will delete
+ myArr.push("ADI") //adi will add at end
+ myArr.shift(); //first element delete hoga 
+ myArr.unshift("adi"); // adi will add at starting
+ console.log(myArr.unshift("adi")); // string ke length return karta hai
+ myArr.toString();// array convert in string 
+ myArr.sort(); // if no. is there then , it will sort
+ console.log(myArr);
+
+*/
+
+//string methods  in js 
+console.log("for String");
+let mylovelyString =" adi is good boy";
+console.log(mylovelyString.length) // this indicates each letter of no. in string
+console.log(mylovelyString.indexOf("good"));
+console.log(mylovelyString.lastIndexOf("good") )//this indicates occurance
+console.log(mylovelyString.slice(1,5)) //this will print 5 letter frong string 
+ d = mylovelyString.replace("adi","nik");
+console.log(d, mylovelyString)
+d=d.replace("good" , "bad");
+console.log(d,mylovelyString);
+
+/* tamplate literals*/  //'' this is backtick symbol
+let boy1 = "Pramod"
+let boy2 = "nikhil"
+// let sentence = 'boy2 is a frd of boy1'
+let sentence = '${boy2} is a frd of ${boy1}'
+console.log(sentence)
+
+/*EScape sequence */
+let fruit = 'Bana\'na' //so we can add ' this sign in words 
+let fruit = 'Bana\nna' //  \n ke bad new line me jaye ga 
+ 
+let fruit = 'Bana\rna'
+console.log(fruit)
+console.log(fruit.length)
+console.log(fruit.toUpperCase())
+console.log(fruit.toLowerCase())
+console.log(fruit.slice(2,4))
+console.log(fruit.slice(2)) 
+
+// question - find amount only
+let str = "please give RS 200000"
+let amount = str.slice("please give RS  ".length)
+console.log(amount)
+
+
+
+
+
+
+//***j.s. dates ***//
+/*
+let myDate = new date();
+console.log(myDate); //dirctly gives date 
+console.log(myDate.getTime()); //this is gives  in sec.
+console.log(myDate.getFullYear()); //gives year  only
+console.log(myDate.getDay());y//gives day only
+console.log(myDate.getMinutes()); //gives min. only
+console.log(myDate.getHours()); // gives hr
+*/
+
+//***  dom -document object manipulation***//
+
+document.getElementById('click').click()
+document.getElementById('click').style.border ='blue'
+
+let elem = document.getElementById('click');
+console.log(elem);
+
+let elemClass = document.getElementsByClassName("container")
+console.log(elemClass);
+ //elemClass[0].style.background = "yellow";
+elemClass[0].classList.add("bg-primary") 
+ //elemClass[0].classList.add(" test-success") 
+ // elemClass[0].classList.remove(" test-success")
+//console.log(elem.innerHTML);
+//console.log(elem.innerText);
+
+tn = document.getElementsByTagName('div')
+console.log(tn)
+createdElement = document.createElement('p');
+createdElement.innerText = "This is a para"
+tn[0].appendchild(createdElement); 
+
+
+createdElement2 = document.createElement('d');
+createdElement2.innerText = "This is a para"
+tn[0].replacechild(createdElement2 , createdElement); // we can replace 
+
+//removechild(element);  // remove childs 
+
+//*** properties of document ***//
+/*
+document.links // gives all the links 
+document.scripts// gives all script
+document.forms
+document.images// if img. wants to extract
+document.domain
+*/
+
+//*** selecting using query ***//
+
+sel = document.querySelector('.container')
+console.log(sel)  //gives 1st container class element
+
+sel = document.querySelectorAll('.container')
+console.log(sel)  //gives all container class element
+
+
+//***events in j.s ***//
+
+function clicked() {
+    console.log('the button was clicked ')
+}
+
+window.onload = function(){
+    console.log('the document was loaded .......')
+}
+
+firstcontainer.addEventListener('click' ,  function () {
+    console.log("click hua ")
+})
+
+firstcontainer.addEventListener('mouseover' /*mouseout,mouseup,mousedown */,  function () {
+    console.log("mouse on container");
+})
+
+firstcontainer.addEventListener('mouseover' /*mouseout,mouseup,mousedown */,  function () {
+    document.querySelectorAll('.container')[1].innerHTML = "<b> we have clicked </b>"
+    console.log("mouse on container");
+})
+
+//Arrow function 
+function sum(a,b){ 
+    return a+b;
+}
+
+logkaro = ()=>{
+    document.querySelectorAll('.container')[1].innerHTML = "<b> we have clicked </b>"
+     console.log("i am your log")
+}
+//or we write as this
+
+//settimeout n setinterval 
+setTimeout(logkaro, 2000);
+
+obj = {name: "harry" , length: 1, a: {this: 'tha"t'}}
+jso =   JSON.stringify(obj);
+console.log(typeof jso)
+console.log(jso)
+parsed =JSON.parse('{"name: "harry" , "length": 1,"a": {"this": "tha"t'"}}')
+console.log(parsed);
+
+/**** ALERT5 CONFIRM PROMPT*****/
+
+alert(" Enter the value of a!")
+let a = prompt("Enter a here","578")
+a = Number.parseInt(a)
+alert("you entered a of type " + (typeof a))
+let write = confirm("do you want to write it to the page ")
+if ( write){
+document.write(a)
+}
+else{
+    document.write ("please allow me to write")
+}
+
+
+
+/*** DOM BOM ,WINDOW OBJECT ***/
+window.console.log(window) 
+console.log(document )
+console.log(document.body)
+//document.body.style.background = "yellow"
+
+//question - write programe using promt funct. and take input from user as age and using alter function tell him wheather they can drive or not 
+
+let age = prompt("Enter your age ")
+age= Number.parseInt(age)
+
+const canDrive = (age)=>{
+    return age>=18?true:false
+}
+
+if(canDrive(age)){
+    alert("yes you can drive ")
+}
+else{
+    alert("you cannot drive ")
+}
+
+
+
+
+//question 2- same question as 1but use confirm to ask user if he wants to see promt again 
+
+let runAgain = true;
+const canDrive = (age)=>{
+    return age>=18?true:false
+}
+while(runAgain) {
+    let age = prompt("Enter your age ")
+age= Number.parseInt(age)   
+
+}
+if(canDrive(age)){
+    alert("yes you can drive ")
+}
+else{
+    alert("you annot drive ")
+}
+runAgain = confirm("Do you want to play again?")
+
+
+ //***dom tree ***/
+ console.log(document.body.firstChild)
+  console.log(document.body.lastChild)
+   console.log(document.body.childNodes)
+   
+   /***dom searching ***/
+//goto 2nd body 
+
+ 
+//chap.8
+<span  >hey i m span</span>
+console.log( document.getElementsByTagName('span')[0]) //return text in span 
+
+console.dir( document.getElementsByTagName('span')[0]);//return properties
+first.innerHTML
+first.outerhtml
+console.log(document.body.textContent)
+//for applying hidden property simply write hidden like,. 
+
+<h2 hidden > this is hidden property </h2>
+//for removing hiden property 
+$0.hidden = false 
+//or
+id.hidden = false
+
+
+
+
+
+
+
+
+
+</script>
+<body>
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div id="liveAlertPlaceholder"></div>
+<button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="ban.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="ban.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="ban.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<br>
+<div>
+</div>
+
+<div class ="container row">
+    
+<div class="card mx-2" style="width: 18rem;">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1_Ovvb8qo8sOOriWn1FjWZN2vuhMzgwShIw&usqp=CAU " class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 id = "firstcard" 
+    class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="card mx-2" style="width: 18rem;">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYSMqFaaQvdd9JpWtDR2AV5VBg8NUhTf70dA&usqp=CAU" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 id = "firstcard" 
+    class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="card mx-2" style="width: 18rem;">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx5jeSbuYjEPOd5FzLP9haXUbZLKWDaFqF2g&usqp=CAU " class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 id = "firstcard" 
+    class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+       
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+ <script>
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+const appendAlert = (message, type) => {
+  const wrapper = document.createElement('div')
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `   <div>${message}</div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    '</div>'
+  ].join('')
+
+  alertPlaceholder.append(wrapper)
+}
+
+const alertTrigger = document.getElementById('liveAlertBtn')
+if (alertTrigger) {
+  alertTrigger.addEventListener('click', () => {
+    appendAlert('Nice, you triggered this alert message!', 'success')
+  })
+}</script>
+
+<script>
+let ctitle = document.getElementsByClassName("card-title")[0]
+ctitle.style.color = "red"
+ 
+</script> 
+<script>
+    let ctitle = document.querySelectorAll(".card-title")      
+ 
+ctitle[0].style.color = "blue"
+ctitle[1].style.color = "red"
+ctitle[2].style.color = "yellow"
+console.log(ctitles)
+
+document.querySelector(".this").style.color = "cyan"
+document.querySelector(".this").style.background = "black "
+
+</script>
+
+ //***attributes methods***//
+
+<div id="first" class=""hey data-game = "mario" data-player="ADI">
+  hey i am first container.
+  </div>
+<script>
+  let a = first.getAttribute("class")  //get -attributes
+  console.log(a)
+console.log(first.hasAttribute("class"))  //has - 
+console.log(first.hasAttribute("style"))
+first.setAttribute("hidden", "true") // set
+first.removeAttribute("class") //remove 
+console,log(first.attribute) //show all attributes .
+  
+console,log(first.dataset)
+console.log(first.dataset.game)
+console.log(first.dataset.player)
+
+
+
+  </script>
+<br><br>
+********************************** classlist and classname ********************************************************************
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  html, body{
+    height:100%;
+    width: 100%;
+  }
+  .yellow{
+    background-color: yellow;
+  color: white;
+  }
+  .red{
+    background-color: red;
+    color: white;
+  }
+  .text-dark{
+    color: black;
+  }
+  
+</style>
+<script>
+  first.classname ="text-black yellow "
+  first.classname =" text-black red-pant yewllow-shirt " // this is types of nthe class u can made in single .
+ first.classlist.remove("red") // red will remove 
+ first.classlist.add("red") // red  class will add 
+ first.classlist.toggle("red") // if nahi honge to lagayega else hatayega 
+ first.classlist.contains("red") // cheack wheather this class already exist or not 
+
+ </script>
+ <body>
+ <div id = "first" class="red text-dark" >
+  <span> hey i m good </span>
+  </div>
+
+         //*****set timeout and setinterval ****//
+
+<script> 
+  alert("hello")
+  setTimeout(function() {
+    alert("i am inside of settimout")
+  }, 2000)
+
+
+document.write("hello")
+let a = setTimeout(function() {
+  alert("i am inside of settimeout ")
+},5000)
+let b = prompt("do you want to run  the same ")
+if("n" == b){
+  clearTimeout(a)
+
+}
+ console.log(a)
+
+  </script>
+//browser events //
+
+<div class="container" onmouseenter="console.log('container ke aander mouse aaya ')"
+onclick="console.log('container me click hua')">
+<button onclick="alert('hello'); let a=6; console.log(a)">Click me</button>
+</div>
+<script>
+  let a = document.getElementsByClassName("container")[0]
+  a.onclick = () => {
+    let b = document.getElementsByClassName("container")[0]
+b.innerHTML = "hello world "
+  }
+  
+  </script>
+ 
+<button id="btn">click me </button>
+<script>
+
+  let x =function(e){
+    alert("Hello world1")
+  }
+
+  let y = function(e){
+    alert("Hello world2")
+  }
+ btn.addEventListener('click',x)
+
+  btn.addEventListener('click', y)
+  
+
+let a = prompt("what is your favorite number?");
+if(a == "2"){
+  btn.removeEventListener ('click', x)
+  })
+}
+
+
+
+  </script>
+
+//***questions***//
+//***-show different alert when click on diff.button***//
+
+<br><br><br>
+
+<button onclick="alert('please give me one plate of chowmein')">chow</button>
+<button onclick="alert('please give me one plate of vadapav')">pow</button>
+<button onclick="alert('please give me one plate of sandwich')">sow</button>
+
+//***create bookmark***//
+<br><br>
+<h1>Bookmark</h1>
+<a href="https://google.com"><button>google</button></a>
+<a href="https://fb.com"><button>facebook </button></a>
+<a href="https://twitter.com"><button>twitter </button></a>
+
+//*** fetch the data from api***//
+
+const fetchContent = async (url)=> {
+  con = await fetch(url);
+  let a = await con.json()
+  return a;
+ }
+ 
+setInterval(async function() {
+  let url = "https://jsonplaceholder.typicode.com/todos/1"
+  console.log(await fetchContent(url))
+},3000)
+ 
+//*** bulb effect***//
+<style>
+  .bulb{
+    height: 34px;
+    width: 34px;
+    background: yellow ;
+  }
+  .bulb-container{
+    height: 341px;
+    width: 341px;
+    
+  }
+  
+  </style>
+<div   id="bulb"  class="bulbcontainer bulb">  
+  hey how are u 
+  </div>
+
+  <script>
+    setInterval(async function() {
+      document.querySelector("#bulb").classList.toggle("bulb")
+    },300)
+    
+</script>
+
+let a = new Date()
+    let h = a.getHours()
+    let m = a.getMinutes()
+    let s = a.getSeconds()
+    let d = a.getDate()
+    console.log(h ,m,s,d)
+
+<br><br><br><br>
+
+********************************************************************chap.9*********************************************
+
+//syncronous programming
+let a = prompt("what is your name?");
+let b = prompt("what is your age?");
+let c = prompt("what is your favorite color?");
+console.log(a + "is" + b + "years old has " + c + "favorite color."); 
+ 
+//asyncronous programming 
+console.log("start")
+setTimeout(function() {
+console.log("hey i m good");
+
+} , 3000)
+console.log("end")
+ 
+//callback function 
+function loadScript(src) , callback {
+  var script = document.createElement("script");
+  script.src = src;
+script.onload = function(){
+  console.log("Loaded script with src: " + src )
+  callback(null ,src);
+}
+script.onerror = function() {
+  console.log("error loading in script with src:" + src); //if error will generated then this line will display 
+callback(new error("src got some eerror "))
+}
+
+  document.body.appendChild(script);
+}
+
+function hello( error , src){
+  if(error){
+    console.log(error)
+    return
+  }
+  alert("hello world!" + src  );
+}
+
+functiom goodmorning(src){
+  alert("hey world!" + src);
+}
+loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous");
+
+<br><br><br>
+**************************************************************************************promise
+<script>
+
+let promise = New promise(function(resolve , reject) {
+ alert("hello")
+  resolve(56)
+})
+
+
+  console.log("hello one ") 
+  setTimeout(function() {
+console.log("hello two in 2 seconds")
+
+  },2000)
+console.log("my name is " + "hello three")  
+console.log(promise)
+  </script>
+
+ // after declearing the promises as resolved or rejected 
+
+ let p1 = new promise((resolve, reject) => {
+  console.log("promise is pending")
+  setTimeout(() => {
+    console.log("i am a promise and i am resolved")
+    resolve(true)
+  },5000)
+
+ })
+let p2 = new promise((resolve, reject) => {
+  console.log("promise is pending")
+  setTimeout(() => {
+    console.log("i am a promise and i am  rejected")
+    reject(new error("i am an error"))
+  },5000)
+
+ })
+ console.log(p1,p2);
+
+or 
+
+p1.then((value) => {    //after print suppose we have to update then the this can used 
+  console.log(value)
+})
+
+p2.catch((error) => {
+  console.log()"some error occurs in p2 "
+})
+
+ *****************************************************promises chaning ************************************
+ let p1 = new promise((resolve,reject)=>{
+  setTimeout(() => {
+    console.log("Resolved after 2sec.")
+    resolve(56)
+  }, 20000);
+ })
+ p1.then((value)=>{
+  console.log(value)
+  let p2 = new promise((resolve ,reject) => {
+    setTimeout(() => {
+      resolve("promises 2")
+    },2000)
+    
+
+  } )
+  return p2
+}).then((value)=> {
+  console.log("we are done ")
+})
+ *****************************attaching multiple handles*********************
+ let p1 = new promise((resolve,reject)=>{
+alert("hey i am not resolved")
+setTimeout(() => {
+  resolve(1);
+
+ },2000);
+   })
+p1.then(()=> {
+  console.log("congratulations this promises now resolved successfully")
+})
+
+
+p1.then(()=> {
+  alert("hurray")       //are are run parallel
+return new promise((resole,reject)=> {
+  setTimeout(() => {
+    resolve(4) 
+  }, 6000);
+})
+})
+
+p1.then(() => {
+  console.log("congrates this promises now resolved.")
+})
+
+********************************promises api in notes***********
+<br>
+***********************async/await**********************
+async function adi() { 
+let delhiWeather = new promise((resolve , reject) =>{
+  setTimeout(() => {
+    resolve("27deg")
+  },1000)
+})
+let bangaloreWeather = new promise((resolve , reject) =>{
+  setTimeout(() => {
+    resolve("23deg")
+  },2000)
+})
+/*delhiWeather.then(alert) 
+bangaloreWeather.then(alert) //return wheater degrees
+*/
+      /*or*/
+      let delhiW = await delhiWeather
+      let bangaloreW = await bangaloreWeather
+      return[delhiW , bangaloreW]
+
+
+
+
+}
+console.log("welcome to wheather control room")
+
+a//sync function adi() {
+  //return 5 
+
+//}
+ //adi().then((x)=> {
+  //alert(x)
+ //})
+
+/***error handling***/
+setTimeout(() =>{
+  console.log("Hacking wifi.....please wait...")
+},1000)
+
+try{/* this will try this , if erroe generated plaese in the console only*/
+  console.log(aditya)
+}
+catch(error){
+  console.log(error)
+}
+
+setTimeout(() =>{
+  console.log("Featching username and password.....please wait...")
+},2000)
+
+setTimeout(() =>{
+  console.log("Hacking aditya'S facebook id.....please wait...")
+},3000)
+
+setTimeout(() =>{
+  console.log("username and password of aditya's (+91111111111).....please wait...")
+},4000)
+
+ 
+/*** error object ***/
+ try {
+  let age = prompt("Enter your age")
+  age = Number.parseInt(age)
+  if(age>150){
+    throw neww referenceError("this is probably not true")
+
+  }
+ } catch (error) {
+    console.log(error.name)
+    console.log(error.massage)  
+   console.log(error.stack)
+  }
+  console.log("the script is still running ")
+  
+
+  /***finally clause***/
+  
+  const f = () => { 
+  try {
+    let a = 0;
+    //console.log(programe)
+    console.log("programe run successfully")
+     return  //even if return is there then also , finally program will run 
+  }
+catch(err) {
+  console.log("this is an error")
+console.log(p)
+}
+finally {
+  console.log(" i am good boy")
+
+}
+  }
+f()
+console.log("End")
+
+
+/***************practiceset ****************/
+// question - write a programe to load a javascript file in a browser using promises. use then() to  display an alert when the load is complete.
+
+const loadScript = async (src)=>{
+  return new Promise(resolve, reject)=>{
+let script = document.createElement("script")
+  script.src = src
+script.onload = ()=>{
+resolve(src + 'done successfully')
+  }
+  document.head.append(script)
+
+ }
+
+} 
+const main2 = ()=>{
+console.log(new Date())
+  let a = await  loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js")
+  console.log(new Date())         
+  console.log(a)
+}
+main2()
+
+</body>
+</html>
+
+
+//fetch api//
+let p = fetch("https://goweather.herokuapp.com/weather/Ny")
+p.then((value1)=>{
+  console.log(value1.status)//return status code
+  console.log(value1.ok)
+  return value1.json()
+}).then((value2) => {
+  console.log(value2)
+})
+
+let p = fetch("https://goweather.herokuapp.com/weather/Ny")
+p.then((response)=>{
+  console.log(response.status)//return status code
+  console.log(response.ok)
+  console.log(response.headers) // we can add headers 
+ // console.log(response.text())  //either run json or text
+  return response.json()
+}).then((value2) => {
+  console.log(value2)
+})
+
+//post request 
+
+let option = {
+  method: "POST"
+  headers: {
+    "content-type": "application/json"
+  },
+  body:   JSON.stringify({
+    title: 'foo',
+    body: 'bar',
+    userId: 1,
+  }),
+}
+}
+fetch('https://jsonplaceholder.typicode.com/posts', option)
+   
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+
+
+//cookies//
+alert(document.cookie)
+document.cookie = "name = adi999"
+document.cookie
+
+
+console.log(document.cookie)
+document.cookie = "name= adi999"
+document.cookie = "name2= adi999"
+document.cookie= "name=adi"
+let key = prompt("enter your key ")
+let value = prompt("enter value value")
+document.cookie = '${encodeURLComponent(key)}=${encodeURLComponent(value)}'
+console.log(document.cookie)
+
+//local storages
+let key = prompt("Enter key you want to set")
+let value = prompt("enter value you want to set ")
+localStorage.setItem(key, value)
+console.log('the value AT ${key} is ${localStorage.getItem(key)}')
+
+if(key == "red" || key =="blue"){
+  localStorage.removeItem(key)
+}
+
+if (key == 0){
+  localStorage.clear()
+}
+
+//session storage -same as local storage but for temporary
+
+
+ 
+ 
+
+ </body>
+
+
+ </html>
+ 
+
+ <br><br>
+
+ //question- use free API from the internet and feed your app with live data 
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+ </head>
+ <body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">context</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div class=""container>
+  <div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
+  
+<div id ="cardContainer" class="row">
+ 
+</div>
+  </div>
+
+  </div>
+
+
+
+
+
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+<script>
+  let url = "https://kontests.net/api/v1/all"
+  let response = fetch(url)
+ response.then((v)=>{
+  return v.json()
+ }).then((contests)=>{
+  console.log(contests)
+  ihtml =""
+  for (item in contests){
+    console.log(contests[item])
+  ihtml += '
+   <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">${contests[item].name}</h5>
+    <p class="card-text"><a href="${contests[item].url()}"> visit here </a></p>
+    <p>starts at:${contests[item].start_time} 
+      <p>starts at:${contests[item].end_time} 
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  </div>
+  '
+  cardContainer.innerHTML =  ihtml
+  }
+ })
+  
+  </script>
+  
+
+
+
+
+
+<!--object oriented programming-->
+
+//prototype
+let a = {
+  name:"aditya",
+  language: "javascript"
+  
+}
+console.log(a)
+
+let p ={
+  run: () => {
+    alert("run")
+  }
+}
+ 
+a.__proto__ = p
+a.run()
+
+
+//class and object 
+class RailwayForm {
+  submit(){
+    alert(this.name + " your form  is submitted ")
+
+  }
+  cancel(){
+    alert(this.name +": this form is cancelled")
+  }
+  fill(givenname){
+    this.name =givenname
+  }
+} 
+
+
+let adiForm = new RailwayForm() 
+adiForm.fill("adi")
+let rohanForm = new RailwayForm()
+rohanForm.fill("rohan")
+adiForm.submit()
+rohanForm.submit()
+rohanForm.cancel()
+
+
+//constructor
+//1 EG
+class RailwayForm {
+  constructor(){
+    console.log("CONSTRUCTOR CALLED...")
+  }
+  submit() {
+    alert(this.name +":your form is submitted for train number: " + this.trainno)
+  }
+  cancel() {
+    alert(this.name + ": this form is cancelled for train number: " + this.trainno)
+  }
+fill(givenname,trainno){
+  this.name = givenname 
+  this.trainno  = trainno
+}
+}
+ 
+let harryForm = new RailwayForm()
+//2 EG
+
+class RailwayForm {
+  constructor(givenname , trainno , address) {
+    console.log("CONSTRUCTOR CALLED..." + GIVENNAME + " " + trainno )
+    this.name = givenname 
+    this.trainno = trainno
+    this.address = address
+
+preview() {
+  alert(this.name + ":your form is the train no :" + this.trainno + "and your address is " + this.address ) 
+}
+submit() {
+  alert(this.name + ":your form is submitted for train number :" + this.trainno)
+  
+}
+cancel() {
+  alert(this.name + ":this form is cancelled for train number :" + this.trainno )
+  this.trainno = 0 
+}
+  }
+
+  let adiForm = new RailwayFORM("ADI" , 13488 , "420,   pacific ocean ,mumbai-000000")
+  adiForm.preview()
+adiForm.submit()
+adiForm.cancel()
+}
+
+
+<script>
+  submit() {
+  alert(this.name + ":your form is submitted for train number :" + this.trainno)
+  
+}
+cancel() {
+  alert(this.name + ":this form is cancelled for train number :" + this.trainno )
+  this.trainno = 0 
+}
+let adiForm = new RailwayFORM("ADI" , 13488 , "420,   pacific ocean ,mumbai-000000")
+  adiForm.preview()
+
+
+  
+  </script>
+
+
+//class inheritance 
+
+class Animal {
+  constructor(name,color) {
+    this.name = name 
+    this.color = color
+  }
+run() {
+  console.log(this.name + "is running!")
+}
+shout() {
+  console.log(this.name + "is eating banana")
+}
+}
+
+class Monkey extends Animal {
+  eatBanana() {
+    console.log(this.name + " is eatimg banana")
+  }
+}
+
+
+
+let ani = new Animal("Bruno" , "white")
+let m = new  Monkey("Chimpu " ,"orange ")
+
+
+//method overriding
+class Employee {
+  constructor(name) {
+    console.log(`${name} - Employee's constructor is here`)
+    this.name = name
+  }
+  login() {
+    console.log(`Employee has logged in`);
+  }
+
+  logout() {
+    console.log(`Employee has logged out`);
+  }
+
+  requestLeaves(leaves) {
+    console.log(`Employee has requested ${leaves} leaves - Auto approved`)
+  }
+}
+
+class Programmer extends Employee {
+  constructor(name) {
+    super(name)
+    console.log(`This is a newly written constructor`)
+  }
+  // constructor(...args){ ---> If there is no constructor in the child class, this is created automatically
+  //   super(...args)
+  // }
+  requestCoffee(x) {
+    console.log(`Employee has requested ${x} coffees`)
+  }
+  requestLeaves(leaves) {
+    super.requestLeaves(4)
+    console.log("One extra is granted")
+    // console.log(`Employee has requested ${leaves + 1} leaves (One extra)`)
+
+  }
+}
+
+let e = new Programmer("Harry")
+e.login()
+e.requestLeaves(3);                     
+
+//Static methods 
+
+class Animal {
+  constructor(name) {
+    this.name = name
+  }
+  walk() {
+    alert("Animal" +  Animal.capitalize(this.name) + "is walking");
+  }
+ static  capitalize(name){
+    return name.charAt(0).toUpperCase() + name.substr(1 , name.length)
+  }
+   
+}
+j = new Animal(jack)
+j.walk()
+
+//getters & setters 
+
+class Animal {
+  constructor(name) {
+    this._name = name
+  }
+  fly() {
+    alert(" hello myself aditya")
+  }
+  get name() {
+    return this._name
+  }
+
+  set name(newName) {
+    this._name = newName
+  }
+}
+
+let a = new Animal("bruno")
+a.fly()
+console.log(a.name)
+a.name = "jack"
+console.log(a.name)
+
+//instance  operator
+// its used for cheaking class  present  or not
+
+//    Q1  create complex clss js and disply comlex no.
+class comlex{
+  constructor(real , imaginary){
+    this.real = real 
+    this.imaginary = imaginary
+  }
+}
+let a =  new  complex(2,4)
+let b =  new  complex(6,2)
+
+
+//Q2 ADD this no. 
+class comlex{
+  constructor(real , imaginary){
+    this.real = real 
+    this.imaginary = imaginary
+  }
+  add(num) {
+     this.real =  this.real + num.real 
+    this.imaginary =  this.imaginary  + num.imaginary
+    
+
+  }
+}
+let a =  new  complex(2,4)
+let b =  new  complex(6,2)
+a.add(b)
+console.log(a.real,a.imaginary);
+//or    console.log('${a.real} + ${a.imaginry}i ')
+
+ //q3-
+ class Complex {
+  constructor(real, imaginary) {
+    this.real = real
+    this.imaginary = imaginary
+  }
+  add(num) {
+    this.real = this.real + num.real
+    this.imaginary = this.imaginary + num.imaginary
+
+  }
+
+  get real() {
+    return this._real
+  }
+
+  get imaginary() {
+    return this._imaginary
+  }
+
+  set imaginary(newImaginary) {
+    this._imaginary = newImaginary
+  }
+
+  set real(newReal) {
+    this._real = newReal
+  }
+}
+// q4
+
+  class Human {
+    constructor(name, favfood) {
+     this.name = name
+      this.favfood = favfood
+   }
+    walk() {
+      console.log(this.name + "Human is walking")
+    }
+  }
+
+  class Student extends Human {
+  walk() {
+    console.log(this.name + ": Student is walking")
+  }
+ }
+
+ let o = new Student("Harry", "Bhindi")
+ o.walk()
+console.log(o instanceof Human)
+
+
+/*todo list*/
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div className="container">
+  <form>
+  <div class="form-group">
+    <label for="title "> todo list</label>
+    <input type="text" class="form-control" id="title" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1"> desc</label>
+    <input type=" text" class="form-control" id="desc ">
+  </div>
+ 
+ 
+  <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+  <button id="deleteBtn" type="delete" class="btn btn-danger">Delete</button>
+</form>
+<div id=" todo">
+  
+  </div>
+
+  </div>
+
+  <script>
+    submit.addEventListener('click' , (e) => {
+      e.preventDefault()
+      let titlec = title.value
+      let descc = desc.value
+      localStorage.setItem("todo" ,JSON.stringify([titlec, descc]))
+      console.log(e)
+todo.innerHTML = '
+<h1> ${titlec} </h1>
+<p> ${descc}</p>
+
+'
+title.value = " "
+desc.value  = " "
+
+   })
+    deleteBtn.addEventListener('click' , (e) => {
+      e.preventDefault()
+      localStorage.removeItem("todo") 
+      todo.innerHTML = ""
+    })
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</body>
+</html>
+
+
+
+
+
+
+
+//password generation
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  
+  class Password:
+    this.password
+    generateStrongPassword()
+    generateWeakPassword()
+    generateSuperStrongPassword()
+    generateFunnyPassword()
+  
+  -->
+  <script src="script.js"></script>
+ 
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+</body>
+
+</html>
+
+//iife  - immediately invoked function expression 
+let a =( ) => {
+  return new Promis((resolve, reject)  => {
+    setTimeout(() => {
+      resole(456)
+    }, 4000);
+  })
+}
+( async () => {
+  let b = await a()
+  console.log(b)
+  let c = await a()
+  console.log(c)
+  let d = await a()
+  console.log(d)
+})()
+
+// destructuring assignment
+
+let arr = [3,5,7,9,11,13]  // now here only take first 3 value beco, of a,b,c.
+let [a,b,c] = arr
+//no need to do this:;
+//let a = arr[0]
+//let b = arr[1]
+console.log(a,b,c)
+
+//or
+let arr = [3,5,7,9,11,13]  
+let [a,b,c,d,  ...rest] = arr
+console.log(a,b,c,d,rest)
+
+
+// suppose rest strt from 9
+let arr = [3,5,7,9,11,13]  
+let [a, , ,  ...rest] = arr
+console.log(a, rest)
+
+let { a, b} =  {  a: 1, b: 5 }
+console.log(a,b)
+
+// spread operator
+let arr1 =  [3,5,8] 
+let obj1 = { ...arr1 }
+console.log(obj1)
+
+
+function sum(v1,v2,v3) {
+  return v1 + v2 + v3
+  
+}
+console.log(sum(...arr1))
+
+let obj2 = {
+  name: "adi"
+  company:"google"
+   address: "xyz" 
+}
+console.log({ ...obj2, name: "nik"})
+//refer mdn ref.
+
+
+//local & global scope
+
+{
+  let a = 8 ;   // let is block level scope
+
+}
+ console.log(a)
+
+ {
+  var a = 8 ;   // var is global level scope
+
+}
+ console.log(a)
+
+
+let p = 9
+function ax() {
+  let a = 8;
+  console.log(p)
+  console.log(a)
+}
+
+ax()
+console.log(p)
+console.log(a)
+
+//hosting
+greet()
+function greet() {
+ console.log("good morning") 
+
+
+}
+// allready declared var
+console.log(a)
+greet()
+function greet() {
+ console.log("good morning") 
+}
+var a = 99;
+console.log()
+
+
+//hosting with let
+console.log(a)
+greet()
+function greet() {
+ console.log("good morning") 
+}
+let a = 99;
+console.log()
+
+//by const
+console.log(a)
+greet()
+function greet() {
+ console.log("good morning") 
+}
+const a = 99;
+console.log()
+
+//by var
+console.log(a)
+greet()
+function greet() {
+ console.log("good morning") 
+}
+var a = 99;
+console.log()
+
+  //closures
+  message = "good morning"
+  function hello1() {
+    message  "good afternoon"
+    console.log("hello 1: " + message)
+  }
+
+// q-
+message ="good global"
+function hello1() {
+  let message = ",good morning"
+  {
+    let message =", good afternoon"
+    console.log("hello1: " + message)
+  }
+  let c =function hello2() {
+console.log("i am adi" + message)    
+  }
+  return c
+}
+c = hello1()
+c()
+
+//arrrow fn
+ const sayHello = name => {
+  console.log("greeting" + " " + name)
+  console.log("hi")
+ }
+ const x = {
+  name : "Harry",
+  role : "js-developer",
+  exp : 30,
+  show : function () {
+    //let that = this
+    //console.log(this)
+    setTimeout(() => {
+      console.log('the name is ${this.name}\nthe role is ${this.role}')
+    }, 2000);
+  }
+ }
+sayHello("adi", "good morning")
+//console.log(x.name , x.exp)
+// x.show()
+
+/// print hey adi & whats up after 2s 
+const a = (text ) => {
+  return new promise((resolve,reject) => {
+    setTimeout(() => {
+      resolve(text)
+    }, 2000);
+  } )
+}
+(
+async () => {
+  let text  = await a("hey adi")
+  console.log(text)
+  text = await a("wats up")
+  console.log(text)  
+}
+)()
+
+//write js to find avg. of no. in an arry using spread syntx
+function sum(a,b,c) {
+return a + b + c  
+}
+let x = [1,3,5] 
+console.log(sum(...x)77 )
+
+// alarm clock
+function play() {
+  var audio = new Audio('https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3') ;
+   audio.play();
+}
+setTimeout(() => {
+  play()
+}, 3000);
+
+
+//modules in js 
+// 2 types  - norml js file , es6modules   
+
+
+</body>
+ </html>
+                                                                                                                                                               
